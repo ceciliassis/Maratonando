@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
-
+// PD -> dicas : numero muito grande NÀO FUNCIONA
+// numero muito pequena PD cabulosa
 using namespace std;
 
 int preco[110], peso[110];
