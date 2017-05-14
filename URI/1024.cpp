@@ -31,4 +31,5 @@ int main(){
     terceira(texto);    
     cout << texto << endl;
   }
+  return 0;
 }
