@@ -16,7 +16,7 @@ int32_t main(){
 	memset(pd,-1,sizeof pd);	
 	fib(40);
 	int a,b;
-	pd[0] = 1;
+	pd[0] = 1; //la em cima só RETORNA 1 e nao ArMAZENA 1
 	pd[1] = 1;
 	pd[2] = 1;
 	while(cin >> a >> b){

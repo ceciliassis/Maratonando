@@ -29,6 +29,8 @@ int main(){
 		f[i] = fibo(i);
 	}
 	while(cin >>  a  >> b){
+    if(a==-1 && b==-1)
+      break;
 		lli soma = 0;
 		for (int i = a; i <= b; ++i)
 		{
