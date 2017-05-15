@@ -10,3 +10,6 @@ string a = (string) str; // melhor que cin
 
 - busca binaria:
   + problema quer satisfazer algo. um numero deve ser encontrado para satisfazer  algo.
+  
+- estudar biblioteca **STL** -> c++ (estrututras prontas (stack queue vector map set))
+
