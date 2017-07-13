@@ -1,0 +1,11 @@
+ ///////WRONG
+18. Crie um algoritmo que, dado um inteiro n, encontre o maior numero fatorial presente como um fator em n.
+
+quemEhMaior(n)
+  maior = -1;
+  soma = 1;
+  for(i=1;i<=n;i++)
+    soma*=i;
+    if(soma>maior)
+      maior = soma;
+ 

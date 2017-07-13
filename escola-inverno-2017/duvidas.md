@@ -1,0 +1,1 @@
+como fazer leitura de linha em branco?

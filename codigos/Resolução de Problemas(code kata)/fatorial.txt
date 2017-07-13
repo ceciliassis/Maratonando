@@ -1,0 +1,7 @@
+﻿num_fat(n)
+	p/cada x!
+		se x! = n          => for i=1 to n, x!=fat(i) //sendo que ja tenho o primeiro fat
+									// vou multiplicando pelo x! que ja está guardado
+			return true
+		se x!>n 
+			return false

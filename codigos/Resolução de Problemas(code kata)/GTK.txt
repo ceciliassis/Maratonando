@@ -1,0 +1,9 @@
+Quando estamos com um problema, no que nos baseamos?
+ - Requisitos (o que fez primeiro)
+ - Objetos similares
+ - Experiencias anteriores , paradigmas.
+Precisamos porem abrir nossos leques de opção, quebrando coisas
+que já estamos acostumados .
+
+Conjunto :  <chave> -> o elemento é a propria chave
+Dicionário : <chave,valor>

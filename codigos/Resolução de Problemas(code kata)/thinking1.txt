@@ -1,0 +1,72 @@
+FUNCÃO SENO
+  sen(x) = x/1 - x³/3! + x⁵/x! - x⁷/7! + ...
+  N termos
+  erro: 10^-6
+  se (x^n/n!) < 10^-6, encerre
+  
+  AlGoRiTmO: 
+    - processamento: 
+        calcule cada termo até termo < 10^-6
+        some o termo ao total
+    - pseudo-codigo 1:
+        i=1;
+        sinal = 1
+        sen = 0;
+        do
+          termo = sinal * calc_termo(x,n)
+          sinal = - sinal;
+          i=i+2;
+          sen = sen + termo;
+        while(|termo| > 10^-6)
+        return sen
+        
+        calc_termo(x,n)
+          pot=1
+          for i=1 to n
+            pot = pot * x
+          return pot/fat(n)
+          
+    mas essa solução demoraria muito logo:
+    
+    t1 x/1! = x/1
+    t3 x³/3! = x*x²/1*2*3 = t1 * x²/2*3
+    t5 x⁵/5! = x³/3! * x²/4*5
+    t7 x⁷/7! = x⁵/5! * x²/6*7    
+    
+     dessa forma o tempo de execução se torna muito menor!
+     e podemos observar que x² sempre aparece e que a divisão é
+     feita pelo t-1 * t , que contem o numero que está caminhando de
+     dois em dois.
+        
+    - pseudo-código 2:
+        i=1:
+        sinal =1;
+        sen=0;
+        t=x;
+        while(|t|>10^-6)
+          sen=sen+t //soma de todos os termos
+          sinal=-sinal
+          i+=2 //variavel de controle, pra qual termo está sendo 
+              // calculado
+          t=(t*x*x)/(i*(i-1))*sinal
+        return sen 
+        
+    - invariante (inicio|meio|fim -> para a variavel de controle) 
+        inicio i=1 // antes de entrar no loop
+          tem a soma de todos os termos até i-1 ? sim          
+        meio i=i //dentro do loop
+          tem a soma de todos os termos até i-2? sim
+            como um dos passos é o calculo do próximo termo de acordo
+            com o anterior, é garantia que tenho a soma por causa
+            do cálculo do termo
+        fim i qualquer |t|>10^-6 == true // depois do loop
+         tem a soma de todos os termos até i-2? sim
+          pela proporção das razoes e pelo fato que o fatorial cresce
+          bem rápido, é garantido que a condição de parada será 
+          atingida
+           
+        
+----------------------------------------------------------------------
+
+                  
+  

@@ -1,0 +1,45 @@
+Todos os arranjos de tamanho 3 com n=5
+
+AlgORItmo força bruta
+  for i=1 to n
+    for j=1 to n 
+      for k=1 to n
+        imprime i j k
+
+AlgORItmo recursivo 1
+  //cada nivel da chamada recursiva é um for
+  arranjo(n,k)
+    if(k==0) return;
+    for i=0 to n
+      arranjo(n,k-1)
+  
+RECURSIVO -> PeNsameNto
+  k=0 a=0 0 0
+  k=1 a=1 0 0
+  -- k=2 a=1 1 0
+     -- k=3 a=1 1 1
+        -- k=4 imprime
+     -- k=3 a=1 1 2
+        -- k=4 imprime
+     -- k=3 a=1 1 3
+        -- k=4 imprime
+     -- k=3 a=1 1 4
+        -- k=4 imprime
+     -- k=3 a=1 1 5
+        -- k=4 imprime
+  -- k=2 a=1 2 5
+    -- k=3 a=1 2 1
+       -- k=4 imprime
+    -- k=3 .
+           .
+           .     
+           
+  alGoRItmo
+  arranjo(n,k,a)
+    if(k==|A|+1)
+      imprime
+    else 
+      for i=1 to n 
+        a[k] = i
+        arranjo(n,k+1,a)
+  

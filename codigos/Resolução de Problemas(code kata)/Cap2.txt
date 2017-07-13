@@ -1,0 +1,58 @@
+Hartal
+	h -> nro dias entre greves sucessivas
+	p/partido
+		n -> nro d dias consecutivos
+	dias ignorados
+		- 6+7 * k, k >=0
+		- 7+7 * k, k >=0
+	
+	Onde estão os 'x's que significam as greves , quero saber quantas grevs ocorreram
+	ou quantos dias de trabalho foram perdidos
+	
+  AlGoRiTmO: 
+    - entrada: h , n, p
+    - processamento: 
+        p/ cada partido 
+            * calcular os dias quando haverá greve
+			* calcular a soma
+				ignorando sex e sab
+            * imprimir o resultado        
+    - saída: nro de dias perdidos
+    
+    - psedo-código:
+		hartals(N,H,p){
+			c = bitset de tam N // inicializar com zero
+			for i=1 to p
+				h = H[i]
+				for j=h to N passo h
+					C[j] = 1;
+			for i=6 to N passo 7
+				C[i] = 0;
+			for i=7 to N passo 7
+				C[i] = 0;
+			s=0;
+			for i=1 to N
+				s+=C[i]
+			return s
+		}
+
+Stack'em Up
+	Baralho B[1..52]
+	Transformações(shuffles) 1<=T<=100
+	transformação t[1..52]
+	t[j]=i => B[j] = B[i]
+	s: sequencia de transformaçoes
+	
+	 
+    - psedo-código:
+		stack_em_up(B,T,S){
+			for each s E S
+			t = T[s]
+			for j = 1 to 52
+				i = t[j]
+				N[j] = B[i]
+				B = N
+			return B
+		}
+            
+            

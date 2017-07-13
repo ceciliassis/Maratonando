@@ -1,0 +1,75 @@
+3N + 1 
+  AlGoRiTmO: 
+    - entrada: i,j E (1,1000000)
+    - processamento: 
+        - força bruta: 
+            * calcular o ciclo p/ cada valor
+            * encontrar o maior ciclo
+            * imprimir o resultado        
+    - saída: i, j , c onde c é o maior ciclo
+    
+    - psedo-código:
+            max = 1 
+            p/ cada valor x E [i,j]
+            ciclo = 1
+            enquanto x > 1
+              se x é par x = x/2
+              senão x = 3*x + 1
+              ciclo ++
+            se max < ciclo
+              max = ciclo
+            return i, j max
+            
+MineSweeper
+  AlGoRiTmO:
+    - entrada: n, m E ]0,100]
+               "." para local seguro e "*" para mina
+    - processamento: varrer o tabuleiro para cada posição, se for mina
+                     incrementar em volta(vizinhos)
+    - saída: imprimir "field #x" x sendo para qual o numero do teste 
+             atual 
+             imprimir "*" para mina e n sendo este o valor de
+             minas ao redor daquele quadrado
+      
+    -psedo-código: minesweeper(m,l,c)
+             p/cada i E [1,l]
+               p/cada j E [1,c]
+                se m[i][j] == -1
+                  incrementa (m[i][j+1])
+                      ''     (m[i][j-1])
+                      ''     (m[i+1][j+1])
+                      ''     (m[i-1][j-1])
+                      ''     (m[i+1][j])
+                      ''     (m[i-1][j])
+                      ''     (m[i+1][j-1])
+                      ''     (m[i-1][j+1])  
+                      
+             incrementa(v)
+              se v!=-1 v = v+1
+              
+The Trip
+  AlGoRiTmO:
+    - entrada: qtd pessoas = n
+               gastos individuais -> g1, ... , gn ordenados
+    - processamento: gi - (média - wi) -> wi == 1, se i<R ou 0, otw
+                     (onde wi sao as moedinhas)
+                     somatório % n = R
+    
+    - saída: valor x | x é o menor valaor transferido para igualar
+             os gastos c/ 0.01 de error
+    
+    - psedo-código: the_trip(G,n)
+        somar todos os gastos
+        calcular a média (parte inteira)
+        R = s % n
+        total  = 0
+        p/cada 
+            r > 0 ? w = 1 : w = 0
+            x = gi - (média + w)        
+            R --
+        se (x > 0)          
+          total += x           
+        return total
+        
+       
+                      

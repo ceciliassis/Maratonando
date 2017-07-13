@@ -1,0 +1,33 @@
+1 - visualizar solução
+2 - montar o algoritmo - pseudo-codigo
+3 - implementar  ( entrada | algoritmo | saida )
+
+invariante -> iteração i o contador tem o valor igual a quantidade de alunos
+aprovados ate a posicao i do vetor
+	inicio -> antes da execucao nenhum aluno foi aprovado, entao c= 0 está correto
+	manutencao na iteracao i , o contador contem o resultado correto ate i-1. verifi-
+	camos o valor de i e incrementamos o contador apenas se tiver sido aprovado(v[i]>=60)
+	matendo o valor correto do contador
+	termino-> i=n entao o contador contem o numero total de alunos aporvados dentre
+	as n notas
+
+-------------------------------------------------------------------
+
+somar um conjunto de numeros
+
+soma_c(C,n)
+	s = 0;
+	for i=1 to n 
+		s = s + C[i];
+	return s;
+
+soma_r(C,n) //recursiva
+	if n==0 return 0;
+	return soma_r(C,n-1) + C[n]
+
+invariante -> na i-ésima iteração temos soma de todos os numeros ate a posicao i
+	inicio -> quando n=0, S=0 --ok
+	manutencao -> somamos a Si-1 o termo da posicao i , calculando
+	efetivamente Si
+	termino -> i=n, entao temos Sn
+	

@@ -1,0 +1,31 @@
+Calcular a Raiz Quadrada
+
+Força Bruta (incremento)
+SQRT(m)
+  n=1
+  for k = 0 to 5
+    inc = 1*10^-k
+    while(n*n<m)
+      n=n+inc
+    n=n-inc
+  return n
+  
+Força Bruta (erro)
+SQRT(m)
+  n=1
+  k=0
+  while((n*n<m-10^-k) || (n*n>m))
+    inc = 1-10^-k
+    k=k+1
+    while(n*n<m)
+      n=n-inc
+    n=n-inc
+  return n
+  
+Busca Binária
+sqrt(m)
+  n=m;
+  while(|(n*n)-m|<10^-6)
+    n=(n+m/n)/2;
+  return n;
+    

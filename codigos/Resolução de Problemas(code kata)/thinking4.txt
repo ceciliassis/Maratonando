@@ -1,0 +1,66 @@
+MERGE
+Pensamento: como juntar dois vetores mantendendo a ordenação?
+
+AlGoRitmO 1
+merge(A,B)
+  C[1 .. A.size+B.size]
+  for i=1 to A.size
+    C[i]=A[i]
+  for i=1 to B.size
+    C[A.size+i]=B[i]
+  sort(c)
+  return c
+  
+AlGoRitmO 2
+Usando uma "sentinela" que será maior que todos os numeros e ai vai ajudar geral
+
+merge(A,B)
+  i,j = 1,1
+  while(i+j-1<= A.size+B.size)
+    if(A[i]<B[i])
+      C[i+j-1] = A[i]
+      ++i
+    else
+      C[i+j-1] = B[j]
+      ++j
+
+
+merge(A,B)
+   N=A.size
+   M=B.size
+   i,j=1
+   A.size=A.size+1
+   A[A.size]=INFINITY
+   B.size=B.size+1
+   B[B.size]=INFINITY
+   Seja C[1..N+M] um novo vetor
+   while(i+j-1<=N+m)
+    if(A[i]<B[i])
+      C[i+j-1]=A[i]
+      ++i
+     else
+      C[i+j-1]=B[j]
+      ++j
+   return c
+   
+MERGE sort
+Pensamento: Divide and conquer. Pega -> divide -> junta, até que tenhamos
+somente um elemento no vetor, sendo esse o caso base de parada. Esse alg 
+é recursivo
+
+AlGoRitmO in place
+merge_sort(A,p,r)
+    if(p>r) return //vai ter passado
+    q=(p+r)/2
+    merge_sort(a,p,q)
+    merge_sort(a,q+1,r)
+    merge(A,p,r)
+    
+AlGoRitmO with copy
+merge_sort(A)
+    if(A.size==1) return A
+    b=merge_sort(a[1..a.size/2]
+    c=merge_sort(a[a.size/2+1..a.size])
+    return merge(b,c)
+
+
